@@ -2,14 +2,14 @@ import React from "react";
 import "./home.css";
 import Data from "./Data";
 import Scroll from "./ScrollDown";
-import Social from "./Social";
+import SocialNetwork from "./SocialNewtwork";
 
 const Home = () => {
   return (
     <section className="home section" id="home">
       <div className="home_container container grid">
         <div className="home_content grid">
-          <Social />
+          <SocialNetwork />
           <div className="home_img"></div>
           <Data />
         </div>

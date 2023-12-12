@@ -2,7 +2,7 @@ import React from "react";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { BsWhatsapp } from "react-icons/bs";
 
-const Social = () => {
+const SocialNewtwork = () => {
   return (
     <div className="home_social">
       <a
@@ -30,4 +30,4 @@ const Social = () => {
   );
 };
 
-export default Social;
+export default SocialNewtwork;
