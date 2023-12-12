@@ -1,30 +1,30 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaWhatsappSquare } from "react-icons/fa";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Social = () => {
   return (
     <div className="home_social">
       <a
-        href="https://www.linkedin.com/in/bmalkes/"
+        href="https://api.whatsapp.com/send?phone=9720549547355&text=Want to talk with you about a project.."
         className="home_social-icon"
         target="_blank"
       >
-        <FaLinkedin size={20} color="000" />
+        <BsWhatsapp />
       </a>
       <a
-        href="https://github.com/BmAlkes"
+        href="https://www.github.com/BmAlkes"
         className="home_social-icon"
         target="_blank"
       >
-        <FaGithub size={20} color="000" />
+        <FiGithub />
       </a>
       <a
-        href="https://api.whatsapp.com/send?phone=9720549547355&text=I like your profile and maybe want a project`"
+        href="https://www.linkedin.com/in/bmalkes"
         className="home_social-icon"
         target="_blank"
       >
-        <FaWhatsappSquare size={20} color="000" />
+        <FiLinkedin />
       </a>
     </div>
   );
