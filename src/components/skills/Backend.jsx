@@ -1,0 +1,54 @@
+import React from "react";
+import { HiCheckBadge } from "react-icons/hi2";
+
+const Backend = () => {
+  return (
+    <div className="skills__content">
+      <h3 className="skills__title">Backend Developer</h3>
+      <div className="skills__box">
+        <div className="skills__group">
+          <div className="skills__data">
+            <HiCheckBadge />
+            <div>
+              <h3 className="skills__name">NodeJS</h3>
+            </div>
+          </div>
+          <div className="skills__data">
+            <HiCheckBadge />
+            <div>
+              <h3 className="skills__name">Firebase</h3>
+            </div>
+          </div>
+          <div className="skills__data">
+            <HiCheckBadge />
+            <div>
+              <h3 className="skills__name">MongoDB</h3>
+            </div>
+          </div>
+        </div>
+        <div className="skills__group">
+          <div className="skills__data">
+            <HiCheckBadge />
+            <div>
+              <h3 className="skills__name">npm</h3>
+            </div>
+          </div>
+          <div className="skills__data">
+            <HiCheckBadge />
+            <div>
+              <h3 className="skills__name">PostgreSQL</h3>
+            </div>
+          </div>
+          <div className="skills__data">
+            <HiCheckBadge />
+            <div>
+              <h3 className="skills__name">Git</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Backend;

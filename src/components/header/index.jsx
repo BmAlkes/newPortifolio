@@ -37,7 +37,7 @@ const Header = () => {
               </a>
             </li>
             <li className="nav_item">
-              <a href="#about" className="nav_link">
+              <a href="#skills" className="nav_link">
                 <IoDocumentTextOutline
                   size={20}
                   color="#000"
@@ -47,13 +47,13 @@ const Header = () => {
               </a>
             </li>
             <li className="nav_item">
-              <a href="#services" className="nav_link">
+              <a href="#experience" className="nav_link">
                 <MdOutlineHomeRepairService
                   size={20}
                   color="#000"
                   className="nav_icon"
                 />
-                Services
+                Experience
               </a>
             </li>
             <li className="nav_item">
@@ -63,7 +63,7 @@ const Header = () => {
               </a>
             </li>
             <li className="nav_item">
-              <a href="#contact" className="nav_link">
+              <a href="contact" className="nav_link">
                 <MdOutlineContactPage
                   size={20}
                   color="#000"
