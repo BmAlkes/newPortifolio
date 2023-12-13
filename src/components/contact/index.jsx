@@ -1,22 +1,40 @@
-import React, { useRef } from "react";
+import { useState } from "react";
 import "./contact.css";
 import { HiOutlineMail, HiOutlineArrowSmRight } from "react-icons/hi";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-// import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_s53x8mc",
-      "template_fwq8n7v",
-      form.current,
-      "cXginQ40keRVEt1YV"
-    );
-    e.target.reset();
+    if (name === "" || email === "" || message === "") {
+      alert("Fill all the fields");
+      return;
+    }
+    const templateParams = {
+      from_name: name,
+      message: message,
+      email: email,
+    };
+
+    emailjs
+      .send(
+        "service_zmxyqh3",
+        "template_zjg781l",
+        templateParams,
+        "yQyYtTEhFTniqkgzi"
+      )
+      .then((response) => {
+        console.log("Email Enviado", response.status, response.text);
+        setName("");
+        setEmail("");
+        setMessage("");
+      });
   };
 
   return (
@@ -69,7 +87,7 @@ const Contact = () => {
         <div className="contact__content">
           <h3 className="contact__title">What's the project?</h3>
 
-          <form ref={form} onSubmit={sendEmail} className="contact__form">
+          <form onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
               <input
@@ -77,6 +95,8 @@ const Contact = () => {
                 name="name"
                 className="contact__form-input"
                 placeholder="Type your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
 
@@ -87,6 +107,8 @@ const Contact = () => {
                 name="email"
                 className="contact__form-input"
                 placeholder="Type your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
 
@@ -98,6 +120,8 @@ const Contact = () => {
                 rows="10"
                 className="contact__form-input"
                 placeholder="Provide some project details..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
 
