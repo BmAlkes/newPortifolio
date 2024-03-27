@@ -76,6 +76,15 @@ export const projectsData = [
     link: "https://ecommerce-xhdu.vercel.app/",
     category: "Javascript/HTML",
   },
+  {
+    id: 8,
+    image:
+      "https://github.com/BmAlkes/guitarLa/blob/main/src/assets/guitta.png?raw=true",
+    title: "React Cart display",
+    description: "Display of cart shop with react and state",
+    link: "https://guitar-la-blush.vercel.app/",
+    category: "React",
+  },
 ];
 
 export const projectsNav = [

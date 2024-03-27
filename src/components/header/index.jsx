@@ -63,7 +63,7 @@ const Header = () => {
               </a>
             </li>
             <li className="nav_item">
-              <a href="contact" className="nav_link">
+              <a href="#contact" className="nav_link">
                 <MdOutlineContactPage
                   size={20}
                   color="#000"
